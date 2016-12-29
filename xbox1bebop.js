@@ -24,9 +24,7 @@ Cylon.robot({
 
     var that = this,
         rightStick = { x: 0.0, y: 0.0 },
-        leftStick = { x: 0.0, y: 0.0 };
-
-    
+        leftStick = { x: 0.0, y: 0.0 };    
 
     my.drone.on("ready", function() {
       console.log("ready...");
@@ -45,17 +43,37 @@ Cylon.robot({
     });
 
 
-    ["a", "b", "x", "y"].forEach(function(button) {
+    ["a", "b", "x", "y", "lb", "rb"].forEach(function(button) {
       console.log("Registered listener:", button);
 
-      my.controller.on("b:press", function() {
-        console.log("Button B pressed.");
-	that.drone.stop();
+      my.controller.on("lb:press", function() {
+        console.log("Button Left Bumper pressed.");
+        that.drone.stop();
+      });
+
+      my.controller.on("rb:press", function() {
+        console.log("Button Right Bumper pressed.");
+	that.drone.emergency();
+      });
+
+      my.controller.on("x:press", function() {
+        console.log("Button X pressed.");
+        that.drone.leftFlip();
       });
 
       my.controller.on("y:press", function() {
         console.log("Button Y pressed.");
-        that.drone.emergency();
+        that.drone.frontFlip();
+      });
+
+      my.controller.on("b:press", function() {
+        console.log("Button B pressed.");
+        that.drone.rightFlip();
+      });
+
+      my.controller.on("a:press", function() {
+        console.log("Button A pressed.");
+        that.drone.backFlip();
       });
     });
 
