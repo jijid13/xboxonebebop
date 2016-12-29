@@ -19,3 +19,7 @@ next version :
 back to home
 flips ....
 it should work !
+
+
+To get video stream try this tuto maybe it will work for you.
+http://developer.parrot.com/blog/2016/play-bebop-stream-on-vlc/
