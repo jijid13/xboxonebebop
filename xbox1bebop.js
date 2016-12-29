@@ -140,10 +140,10 @@ Cylon.robot({
 
       if (pair.x > 0) {
         that.drone.clockwise(validatePitch(pair.x));
-	console.log("clockwise value:", validatePitch(pair.y));
+	console.log("clockwise value:", validatePitch(pair.x));
       } else if (pair.x < 0) {
         that.drone.counterClockwise(validatePitch(pair.x));
-	console.log("counterclockwise value:", validatePitch(pair.y));
+	console.log("counterclockwise value:", validatePitch(pair.x));
       }
     }, 0);
 
