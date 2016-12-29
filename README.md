@@ -4,7 +4,7 @@ This repo is for controlling Parrot Bebop with xbox one controller and nodejs us
 
 First install cylon-bebop (https://github.com/hybridgroup/cylon-bebop) and cylon-joystick (https://github.com/hybridgroup/cylon-joystick) npm install cylon-bebop npm install cylon-joystick
 Install the Xbox One Driver for mac os (https://github.com/360Controller/360Controller/releases) and configure it in System Preferences >> Xbox 360 controllers
-Donwload the file xbox1bebop.js
+Donwload the file <a href="https://github.com/jijid13/xboxonebebop/blob/master/xbox1bebop.js">xbox1bebop.js</a>
 Connect to the Bebop wifi, connect your Xbox One Controller and start the file xbox1bebop.js node xbox1bebop.js
 Features :
 
